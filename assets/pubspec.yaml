@@ -1,5 +1,5 @@
-name: flutter_aging_chart_app
-description: A new Flutter project.
+name: metrix_pilot
+description: MetrixPilot guides teams through data complexity with an intuitive app that clearly visualizes metrics and KPIs. This solution seamlessly integrates with existing project management tools and turns complex data into actionable insights.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -22,26 +22,26 @@ dependencies:
   get: ^4.6.6
   flutter_launcher_icons: ^0.13.1
   atlassian_apis: ^0.15.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
   envied: ^0.5.4+1
   url_launcher: ^6.3.0
   yaml: ^3.1.0
   url_strategy: ^0.3.0
-
-
+  drift: ^2.20.0
+  drift_flutter: ^0.2.0
+  riverpod: ^2.3.0
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mockito: ^5.4.4
-  build_runner: any
-  devtools_extensions: ^0.2.1
+  build_runner: ^2.4.12
+  #  devtools_extensions: ^0.2.2
   http_mock_adapter: ^0.6.1
   flutter_oss_licenses: ^3.0.2
-  hive_generator: ^2.0.1
   envied_generator: ^0.5.4+1
   json_serializable: ^6.8.0
+  drift_dev: ^2.20.0
 
 flutter:
   generate: true
@@ -49,6 +49,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/logo.png
     #    - images/a_dot_burr.jpeg
     - assets/images/
     - pubspec.yaml
@@ -79,6 +80,12 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
+targets:
+  $default:
+    builders:
+      drift_dev:
+        options:
+          fatal_warnings: true
 
 #flutter_scripts
 # see https://pub.dev/documentation/flutter_scripts/latest/
