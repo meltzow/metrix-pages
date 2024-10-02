@@ -1,5 +1,5 @@
 name: metrix_pilot
-description: MetrixPilot guides teams through data complexity with an intuitive app that clearly visualizes metrics and KPIs. This solution seamlessly integrates with existing project management tools and turns complex data into actionable insights.
+description: metrix pilot guides teams through data complexity with an intuitive app that clearly visualizes metrics and KPIs. This solution seamlessly integrates with existing project management tools and turns complex data into actionable insights.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -110,3 +110,5 @@ scripts:
   generate_screenshots_ios: screenshots --config=screenshots-ios.yaml
   generate_licenses: flutter pub run flutter_oss_licenses:generate.dart
   generate_database_schema: dart run drift_dev schema dump lib/model/storage_service.dart drift_schemas/
+  generate_database_schema_steps: dart run drift_dev schema steps drift_schemas/ lib/model/schema_versions.dart
+  generate_database_schema_generate: dart run drift_dev schema generate drift_schemas/ test/generated_migrations/

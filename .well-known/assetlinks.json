@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.meltzow.deckng",
+      "sha256_cert_fingerprints": [
+        "EB:8A:BF:6C:B0:54:E4:B0:05:87:19:1E:C9:58:A2:DA:5F:62:50:38:BE:FA:87:9A:36:56:0A:C4:FE:99:BE:A9"
+      ]
+    }
+  }
+]
